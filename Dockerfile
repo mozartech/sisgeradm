@@ -26,8 +26,11 @@ RUN pip install --upgrade pip && \
 # Copia o restante da aplicação
 COPY . .
 
+# Garante que o diretório esteja no PYTHONPATH
+ENV PYTHONPATH="${PYTHONPATH}:/app"
+
 # Expõe a porta padrão do Gunicorn
 EXPOSE 8000
 
 # Comando padrão para iniciar o servidor
-CMD ["gunicorn", "sisadmger.wsgi:application", "--bind", "0.0.0.0:8000"]
+CMD ["gunicorn", "--chdir", "/app", "sisgeradm.wsgi:application", "--bind", "0.0.0.0:8000"]
