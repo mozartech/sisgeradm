@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema Comercial - Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+    <!-- Navbar com botão Sair -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">SisComercial</a>
+            <div class="d-flex ms-auto">
+                <a href="/logout/" class="btn btn-outline-light">Sair</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 class="mb-4">Bem-vindo ao Sistema Comercial</h1>
+
+        <div class="row g-4">
+            <!-- Clientes -->
+            <div class="col-md-4">
+                <div class="card border-primary">
+                    <div class="card-header bg-primary text-white">Clientes</div>
+                    <div class="card-body">
+                        <p>Gerencie seus clientes, contatos e segmentos.</p>
+                        <ul class="list-unstyled">
+                            <li><a href="/cliente/listar/">Listar Clientes</a></li>
+                            <li><a href="/cliente/adicionar/">Novo Cliente</a></li>
+                            <li><a href="/contato/listar/">Contatos</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pedidos -->
+            <div class="col-md-4">
+                <div class="card border-success">
+                    <div class="card-header bg-success text-white">Pedidos</div>
+                    <div class="card-body">
+                        <p>Controle de pedidos e vendas realizadas.</p>
+                        <ul class="list-unstyled">
+                            <li><a href="/pedido/listar/">Listar Pedidos</a></li>
+                            <li><a href="/pedido/adicionar/">Novo Pedido</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gerencial -->
+            <div class="col-md-4">
+                <div class="card border-warning">
+                    <div class="card-header bg-warning text-dark">Painel Gerencial</div>
+                    <div class="card-body">
+                        <p>Relatórios e análises por canal, grupo, vendedor e mais.</p>
+                        <ul class="list-unstyled">
+                            <li><a href="/gerencial/dashboard/">Dashboard</a></li>
+                            <li><a href="/gerencial/resumo/venda/2025/">Resumo de Vendas</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cadastros auxiliares -->
+            <div class="col-md-4">
+                <div class="card border-info">
+                    <div class="card-header bg-info text-white">Cadastros Auxiliares</div>
+                    <div class="card-body">
+                        <ul class="list-unstyled">
+                            <li><a href="/canal/listar/">Canais</a></li>
+                            <li><a href="/marca/listar/">Marcas</a></li>
+                            <li><a href="/segmento/listar/">Segmentos</a></li>
+                            <li><a href="/status/listar/">Status</a></li>
+                            <li><a href="/grupo/listar/">Grupos</a></li>
+                            <li><a href="/vendedor/listar/">Vendedores</a></li>
+                            <li><a href="/fabrica/listar/">Fábricas</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dados fictícios -->
+            <div class="col-md-8">
+                <div class="card border-secondary">
+                    <div class="card-header bg-secondary text-white">Resumo Fictício</div>
+                    <div class="card-body">
+                        <p><strong>Clientes cadastrados:</strong> 128</p>
+                        <p><strong>Pedidos realizados este mês:</strong> 42</p>
+                        <p><strong>Faturamento estimado:</strong> R$ 87.450,00</p>
+                        <p><strong>Vendedores ativos:</strong> 5</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center mt-5 mb-3 text-muted">
+        &copy; 2025 SisComercial - MVP
+    </footer>
+
+</body>
+</html>
